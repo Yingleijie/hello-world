@@ -1,0 +1,29 @@
+import time
+import webbrowser
+
+count=1
+
+def breath_1():
+    webbrowser.open('https://www.shanbay.com/wordbook/189943/')
+
+def breath_2():
+    webbrowser.open('http://music.163.com/#/song?id=186014')
+    
+number=count%2
+
+def sleep():
+    time.sleep(60*60)
+
+while count<3:
+    if number==1:
+        sleep()
+        breath_1()
+        count+=1
+        number=count%2
+
+    if number==0:
+        sleep()
+        breath_2()
+        count+=1
+        number=count%2
+        
